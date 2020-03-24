@@ -1,0 +1,36 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        },
+        {
+            "name": "PS4",
+            "includePath": [
+                "${workspaceFolder}/doomgeneric/**",
+                "${env:OO_PS4_TOOLCHAIN}/include/"
+            ],
+            "defines": [
+                "__PS4__"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "intelliSenseMode": "clang-x64",
+            "compilerArgs": [
+                "-Wall",
+                "-DNORMALUNIX",
+                "-DLINUX",
+                "-DSNDSERV"
+            ]
+        }
+    ],
+    "version": 4
+}

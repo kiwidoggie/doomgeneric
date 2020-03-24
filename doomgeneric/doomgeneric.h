@@ -3,9 +3,13 @@
 
 #include <stdint.h>
 
+#if defined(__PS4__)
+#define DOOMGENERIC_RESX 1280
+#define DOOMGENERIC_RESY 720
+#else
 #define DOOMGENERIC_RESX 640
 #define DOOMGENERIC_RESY 400
-
+#endif
 
 extern uint32_t* DG_ScreenBuffer;
 

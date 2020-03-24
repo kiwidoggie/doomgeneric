@@ -1,3 +1,4 @@
+#ifdef __WIN32__
 #include "doomkeys.h"
 
 #include "doomgeneric.h"
@@ -195,3 +196,4 @@ void DG_SetWindowTitle(const char * title)
 		SetWindowTextA(s_Hwnd, title);
 	}
 }
+#endif

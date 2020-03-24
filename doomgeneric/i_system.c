@@ -165,25 +165,33 @@ byte *I_ZoneBase (int *size)
 
 void I_PrintBanner(char *msg)
 {
-    int i;
-    int spaces = 35 - (strlen(msg) / 2);
+    #ifdef __PS4__
+        // TOOD: Implement
+    #else
+        int i;
+        int spaces = 35 - (strlen(msg) / 2);
 
-    for (i=0; i<spaces; ++i)
-        putchar(' ');
+        for (i=0; i<spaces; ++i)
+            putchar(' ');
 
-    puts(msg);
+        puts(msg);
+    #endif
 }
 
 void I_PrintDivider(void)
 {
-    int i;
+    #ifdef __PS4__
+        // TODO: Implement
+    #else
+        int i;
 
-    for (i=0; i<75; ++i)
-    {
-        putchar('=');
-    }
+        for (i=0; i<75; ++i)
+        {
+            putchar('=');
+        }
 
-    putchar('\n');
+        putchar('\n');
+    #endif
 }
 
 void I_PrintStartupBanner(char *gamedescription)
